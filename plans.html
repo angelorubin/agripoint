@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="plans.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="global-styles.css" />
@@ -38,22 +38,60 @@
             </li>
           </ul>
           <div class="plans-access">
-            <button class="plans-access__btn--login">LOGIN</button>
-            <button class="plans-access__btn--subscribe">ASSINE AGORA</button>
+            <button type="button" class="plans-access__btn--login">
+              LOGIN
+            </button>
+            <button type="button" class="plans-access__btn--subscribe">
+              ASSINE AGORA
+            </button>
           </div>
         </div>
         <hr class="plans-header__divider" />
-        <div class="plans-sub-menu-container">
-          <h1 class="plans-sub-menu__title">Planos</h1>
-          <p class="plans-sub-menu__text">
-            Tenha acesso ao melhor portal de informações do mercado lácteo do
-            Brasil. Tudo o que você precisa para tomar as melhores decisões em
-            seu negócio!
-          </p>
+        <div class="plans-submenu-container">
+          <div class="plans-submenu">
+            <h1 class="plans-submenu__title">Planos</h1>
+            <p class="plans-submenu__text">
+              Tenha acesso ao melhor portal de informações do mercado lácteo do
+              Brasil.
+            </p>
+            <p class="plans-submenu__text">
+              Tudo o que você precisa para tomar as melhores decisões em seu
+              negócio!
+            </p>
+          </div>
         </div>
       </header>
-      <main>Main</main>
-      <footer>Footer</footer>
+      <main class="plans-main">
+        <h1 class="plans-main__title">Escolha um de nossos planos</h1>
+        <div class="plans-main-cards">
+          <div id="monthly" class="plans-main__card--default">
+            <h1 class="plans-main-card__title">Mensal</h1>
+            <hr class="plans-main-card__divider" />
+            <p class="plans-main-card__text">
+              R$<span class="plans-main-card__price">400</span>/mês
+            </p>
+            <p class="plans-main-card__password">Senha adicional:</p>
+            <p class="plans-main-card__password">R$ 70/mês</p>
+            <hr class="plans-main-card__divider" />
+            <button type="button" class="plans-main-card__btn">ASSINAR</button>
+          </div>
+          <div id="yearly" class="plans-main__card--default">
+            <h1 class="plans-main-card__title">Anual</h1>
+            <hr class="plans-main-card__divider" />
+            <p class="plans-main-card__text">
+              R$<span class="plans-main-card__price">383</span>/mês
+            </p>
+            <p class="plans-main-card__password">Senha adicional:</p>
+            <p class="plans-main-card__password">R$ 70/mês</p>
+            <hr class="plans-main-card__divider" />
+            <button type="button" class="plans-main-card__btn">ASSINAR</button>
+          </div>
+        </div>
+        <p class="plans-notice__text">
+          Somos um produto de assinatura recorrente. Saiba mais na seção
+          <a href="" class="plans-notice__link">dúvidas frequentes.</a>
+        </p>
+      </main>
     </div>
     <script src="plans.js"></script>
   </body>
