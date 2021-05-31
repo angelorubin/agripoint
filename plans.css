@@ -11,7 +11,7 @@
   border-top: 0.1rem solid #5db1b1;
   border-left: none;
   border-bottom: none;
-  border-bottom: none;
+  border-right: none;
 }
 
 .plans-menu-container {
@@ -22,7 +22,7 @@
 .plans-menu {
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 30px;
   flex: 3;
   list-style: none;
 }
@@ -39,20 +39,22 @@
 .plans-access__btn--login {
   color: white;
   background-color: #215273;
-  border: 1px solid #707070;
   min-width: 80px;
-  height: 32px;
+  min-height: 32px;
   font-size: 13px;
+  border-radius: 5px;
+  border: none;
 }
 
 .plans-access__btn--subscribe {
   color: #215273;
   background-color: white;
-  border: 1px solid #707070;
   font-family: OpensSans-ExtraBold, sans-serif;
   min-width: 142px;
   min-height: 32px;
   font-size: 13px;
+  border-radius: 5px;
+  border: none;
 }
 
 .plans-menu__item {
