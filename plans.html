@@ -63,28 +63,45 @@
       </header>
       <main class="plans-main">
         <h1 class="plans-main__title">Escolha um de nossos planos</h1>
-        <div class="plans-main-cards">
-          <div id="monthly" class="plans-main__card--default">
-            <h1 class="plans-main-card__title">Mensal</h1>
-            <hr class="plans-main-card__divider" />
-            <p class="plans-main-card__text">
-              R$<span class="plans-main-card__price">400</span>/mês
+        <div class="plans-cards">
+          <div id="monthly" class="plans-card-monthly card">
+            <h1 class="plans-card-monthly__title">Mensal</h1>
+            <hr class="plans-card-monthly__divider" />
+            <p class="plans-card-monthly__text">
+              R$<span class="plans-card-monthly__price">400</span>/mês
             </p>
-            <p class="plans-main-card__password">Senha adicional:</p>
-            <p class="plans-main-card__password">R$ 70/mês</p>
-            <hr class="plans-main-card__divider" />
-            <button type="button" class="plans-main-card__btn">ASSINAR</button>
+            <p class="plans-card-monthly__password">Senha adicional:</p>
+            <p class="plans-card-monthly__monthly-value">R$ 70/mês</p>
+            <hr class="plans-card-monthly__divider" />
+
+            <a
+              href="http://127.0.0.1:5500/payment.html"
+              class="plans-card-monthly__link--subscription"
+              >ASSINAR</a
+            >
           </div>
-          <div id="yearly" class="plans-main__card--default">
-            <h1 class="plans-main-card__title">Anual</h1>
-            <hr class="plans-main-card__divider" />
-            <p class="plans-main-card__text">
-              R$<span class="plans-main-card__price">383</span>/mês
-            </p>
-            <p class="plans-main-card__password">Senha adicional:</p>
-            <p class="plans-main-card__password">R$ 70/mês</p>
-            <hr class="plans-main-card__divider" />
-            <button type="button" class="plans-main-card__btn">ASSINAR</button>
+          <div id="yearly" class="plans-card-yearly card">
+            <div class="plans-card-yearly-header">MELHOR ESCOLHA</div>
+            <div class="plans-card-yearly-content">
+              <h1 class="plans-card-yearly__title">Anual</h1>
+              <hr class="plans-card-yearly__divider" />
+              <p class="plans-card-yearly__text">
+                R$<span class="plans-card-yearly__price">383</span>/mês
+              </p>
+              <p class="plans-card-yearly__text--yearly">
+                Valor anual R$ 4.600
+              </p>
+              <p class="plans-card-yearly__password">Senha adicional:</p>
+              <p class="plans-card-yearly__password">R$ 840/ano</p>
+              <hr class="plans-card-yearly__divider" />
+              <a
+                href="http://127.0.0.1:5500/payment.html"
+                type="button"
+                class="plans-card-yearly__link--subscription"
+              >
+                ASSINAR
+              </a>
+            </div>
           </div>
         </div>
         <p class="plans-notice__text">
