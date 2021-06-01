@@ -1,5 +1,5 @@
 /**
- * HEADER
+ * Header
  */
 
 .plans-header {
@@ -91,7 +91,7 @@
 .plans-submenu__title {
   font-size: 50px;
   color: white;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .plans-submenu__text {
@@ -102,7 +102,7 @@
 }
 
 /**
- * MAIN
+ * Main
  */
 
 .plans-main {
@@ -119,20 +119,26 @@
   margin: 50px 0;
 }
 
-.plans-main-cards {
+.plans-cards {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   margin: 0 0 50px 0;
 }
 
-.plans-main__card--default {
+/**
+ * Card Monthly
+ */
+
+.plans-card-monthly {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   align-items: center;
   min-width: 300px;
-  min-height: 400px;
+  height: 400px;
   border-top: 7px solid #86c4c5;
   border-bottom: 7px solid #86c4c5;
   border-left: 1px solid #86c4c5;
@@ -140,54 +146,42 @@
   border-radius: 5px;
 }
 
-.plans-main__card--click {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  min-width: 300px;
-  min-height: 400px;
-  border-top: 7px solid #86c4c5;
-  border-bottom: 7px solid #86c4c5;
-  border-left: 1px solid #86c4c5;
-  border-right: 1px solid #86c4c5;
-  border-radius: 5px;
-}
-
-.plans-main-card__title {
+.plans-card-monthly__title {
   font-size: 30px;
   color: #215273;
 }
 
-.plans-main-card__divider {
+.plans-card-monthly__divider {
   border-top: 2px solid #e0e0e0;
   width: 70%;
 }
 
-.plans-main-card__text {
-  font-size: 20px;
-  color: #359d9e;
-}
-
-.plans-main-card__price {
+.plans-card-monthly__price {
   font-size: 60px;
-  font-weight: bolder;
+  font-weight: 800;
   color: #359d9e;
   margin: 0 5px;
 }
 
-.plans-main-card__password {
+.plans-card-monthly__text {
+  font-size: 20px;
+  color: #359d9e;
+}
+
+.plans-card-monthly__password {
   color: #215273;
   font-size: 20px;
 }
 
-.plans-main-card__title {
-  font-size: 30px;
+.plans-card-monthly__monthly-value {
   color: #215273;
+  font-size: 20px;
 }
 
-.plans-main-card__btn {
+.plans-card-monthly__link--subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 120px;
   min-height: 40px;
   font-size: 15px;
@@ -195,7 +189,99 @@
   background-color: #359d9e;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
 }
+
+/**
+ * Card Yearly
+ */
+
+.plans-card-yearly {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  border-bottom: 7px solid #215273;
+  border-left: 2px solid #215273;
+  border-right: 2px solid #215273;
+  border-top: 1px solid #215273;
+  border-radius: 5px;
+}
+
+.plans-card-yearly-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: #215273;
+  min-height: 42px;
+  width: 100%;
+  text-align: center;
+}
+
+.plans-card-yearly-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 465px;
+  gap: 20px;
+}
+
+.plans-card-yearly__title {
+  font-size: 30px;
+  color: #215273;
+}
+
+.plans-card-yearly__divider {
+  border-top: 2px solid #e0e0e0;
+  width: 70%;
+}
+
+.plans-card-yearly__text {
+  font-size: 20px;
+  color: #55c595;
+}
+
+.plans-card-yearly__text--yearly {
+  font-size: 20px;
+  color: #215273;
+}
+
+.plans-card-yearly__price {
+  font-size: 60px;
+  font-weight: 800;
+  color: #55c595;
+  margin: 0 5px;
+}
+
+.plans-card-yearly__password {
+  color: #215273;
+  font-size: 20px;
+}
+
+.plans-card-yearly__title {
+  font-size: 30px;
+  color: #215273;
+}
+
+.plans-card-yearly__link--subscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  min-height: 40px;
+  font-size: 15px;
+  color: white;
+  background-color: #55c595;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/**
+ * Footer
+ */
 
 .plans-notice__text {
   color: #777777;
