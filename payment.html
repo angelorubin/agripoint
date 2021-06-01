@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agripoint - Pagamento</title>
-    <link rel="stylesheet" href="pagamento.css" />
+    <link rel="stylesheet" href="payment.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap"
@@ -15,10 +15,159 @@
   </head>
   <body>
     <div>
-      <header>Página de Pagamentos</header>
-      <main>Main</main>
-      <footer>Footer</footer>
-      <script src="pagamento.js"></script>
+      <header class="pay-header">
+        <div class="pay-menu-container">
+          <ul class="pay-menu">
+            <li class="pay-menu__item">
+              <a class="pay-menu__link" href="/plataforma">A PLATAFORMA</a>
+            </li>
+            <li class="pay-menu__item">
+              <a class="pay-menu__link" href="/plataforma">PLANOS</a>
+            </li>
+            <li class="pay-menu__item">
+              <a class="pay-menu__link" href="/plataforma">FAQ</a>
+            </li>
+            <li class="pay-menu__item">
+              <a class="pay-menu__link" href="/plataforma">SERVIÇOS</a>
+            </li>
+            <li class="pay-menu__item">
+              <a class="pay-menu__link" href="/plataforma">SOBRE NÓS</a>
+            </li>
+            <li class="pay-menu__item">
+              <a class="pay-menu__link" href="/plataforma">CONTATO</a>
+            </li>
+          </ul>
+          <div class="pay-access">
+            <button type="button" class="pay-access__btn--login">LOGIN</button>
+            <button type="button" class="pay-access__btn--subscribe">
+              ASSINE AGORA
+            </button>
+          </div>
+        </div>
+        <hr class="pay-header__divider" />
+        <div class="pay-submenu-container">
+          <div class="pay-submenu">
+            <h1 class="pay-submenu__title">Pagamento</h1>
+            <p class="pay-submenu__text">
+              Tenha acesso ao melhor portal de informações do mercado lácteo do
+              Brasil.
+            </p>
+            <p class="pay-submenu__text">
+              Tudo o que você precisa para tomar as melhores decisões em seu
+              negócio!
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="pay-main">
+        <div class="pay-content">
+          <form class="pay-form">
+            <div class="pay-confirm-data">
+              <h1 class="pay-confirm-data__title">Confirme seus dados</h1>
+              <div class="pay-confirm-block">
+                <label class="pay-confirm__label">Nome</label>
+                <input id="name" class="pay-confirm__input type="text" />
+                <span class="pay-confirm__message--hidden"
+                  >Campo obrigatório</span
+                >
+              </div>
+              <div class="pay-confirm-block">
+                <label class="pay-confirm__label">E-mail</label>
+                <input id="email" class="pay-confirm__input type="text" />
+                <span class="pay-confirm__message--hidden"
+                  >Campo obrigatório</span
+                >
+              </div>
+              <div class="pay-confirm-block">
+                <label class="pay-confirm__label--error">CPF</label>
+                <input id="cpf" class="pay-confirm__input--error" type="text" />
+                <span class="pay-confirm__message--error"
+                  >Campo obrigatório</span
+                >
+              </div>
+              <div class="pay-confirm-block-double">
+                <div class="pay-confirm-block-internal">
+                  <label class="pay-confirm__label">Telefone</label>
+                  <input id="telefone" class="pay-confirm__input type="text" />
+                  <span class="pay-confirm__message--hidden"
+                    >Campo obrigatório</span
+                  >
+                </div>
+                <div class="pay-confirm-block-internal">
+                  <label class="pay-confirm__label">CEP</label>
+                  <input id="cep" class="pay-confirm__input type="text" />
+                  <span class="pay-confirm__message--hidden"
+                    >Campo obrigatório</span
+                  >
+                </div>
+              </div>
+              <div class="pay-confirm-block">
+                <label class="pay-confirm__label">Endereço</label>
+                <input id="endereco" class="pay-confirm__input type="text" />
+                <span class="pay-confirm__message--hidden"
+                  >Campo obrigatório</span
+                >
+              </div>
+              <div class="pay-confirm-block-double">
+                <div class="pay-confirm-block-internal">
+                  <label class="pay-confirm__label">Número</label>
+                  <input id="numero" class="pay-confirm__input type="text" />
+                  <span class="pay-confirm__message--hidden"
+                    >Campo obrigatório</span
+                  >
+                </div>
+                <div class="pay-confirm-block-internal">
+                  <label class="pay-confirm__label">Complemento</label>
+                  <input id="complemento" class="pay-confirm__input type="text"
+                  />
+                  <span class="pay-confirm__message--hidden"
+                    >Campo obrigatório</span
+                  >
+                </div>
+              </div>
+            </div>
+            <hr class="pay-form__divider" />
+            <div class="pay">
+              <h1 class="pay__title">Pagamento</h1>
+              <h2 class="pay__subtitle">
+                Plano selecionado: <span class="pay__plan"></span>
+              </h2>
+              <div class="pay-block">
+                <label class="pay__label">Nome no cartão de crédito</label>
+                <input id="nome-cartao" class="pay__input" />
+                <span class="pay__message--hidden">Campo obrigatório</span>
+              </div>
+              <div class="pay-block">
+                <label class="pay__label">Número do cartão</label>
+                <input id="numero-cartao" type="text" class="pay__input" />
+                <span class="pay__message--hidden">Campo obrigatório</span>
+              </div>
+              <div class="pay-block-triple">
+                <div>
+                  <label class="pay__label">Validade (MM/YY)</label>
+                  <div>
+                    <input id="mes" type="text" class="pay__input" />
+                    <span class="pay__message--hidden">Campo obrigatório</span>
+                  </div>
+                  <div>
+                    <input id="ano" type="text" class="pay__input" />
+                    <span class="pay__message--hidden">Campo obrigatório</span>
+                  </div>
+                </div>
+                <div>
+                  <label class="pay__label">Código de segurança</label>
+                  <input id="codigo-seguranca" type="text" class="pay__input" />
+                  <span class="pay__message--hidden">Campo obrigatório</span>
+                </div>
+              </div>
+              <div class="pay-block-btn">
+                <button class="pay__btn" type="submit">FINALIZAR</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <script src="payment.js"></script>
     </div>
   </body>
 </html>
