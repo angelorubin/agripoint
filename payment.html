@@ -66,36 +66,36 @@
               <h1 class="pay-confirm-data__title">Confirme seus dados</h1>
               <div class="pay-confirm-block">
                 <label class="pay-confirm__label">Nome</label>
-                <input id="name" class="pay-confirm__input type="text" />
+                <input id="name" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--hidden"
                   >Campo obrigatório</span
                 >
               </div>
               <div class="pay-confirm-block">
                 <label class="pay-confirm__label">E-mail</label>
-                <input id="email" class="pay-confirm__input type="text" />
+                <input id="email" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--hidden"
                   >Campo obrigatório</span
                 >
               </div>
               <div class="pay-confirm-block">
-                <label class="pay-confirm__label--error">CPF</label>
-                <input id="cpf" class="pay-confirm__input--error" type="text" />
-                <span class="pay-confirm__message--error"
+                <label class="pay-confirm__label">CPF</label>
+                <input id="cpf" class="pay-confirm__input" type="text" />
+                <span class="pay-confirm__message--hidden"
                   >Campo obrigatório</span
                 >
               </div>
               <div class="pay-confirm-block-double">
                 <div class="pay-confirm-block-internal">
                   <label class="pay-confirm__label">Telefone</label>
-                  <input id="telefone" class="pay-confirm__input type="text" />
+                  <input id="telefone" class="pay-confirm__input" type="text" />
                   <span class="pay-confirm__message--hidden"
                     >Campo obrigatório</span
                   >
                 </div>
                 <div class="pay-confirm-block-internal">
                   <label class="pay-confirm__label">CEP</label>
-                  <input id="cep" class="pay-confirm__input type="text" />
+                  <input id="cep" class="pay-confirm__input" type="text" />
                   <span class="pay-confirm__message--hidden"
                     >Campo obrigatório</span
                   >
@@ -103,7 +103,7 @@
               </div>
               <div class="pay-confirm-block">
                 <label class="pay-confirm__label">Endereço</label>
-                <input id="endereco" class="pay-confirm__input type="text" />
+                <input id="endereco" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--hidden"
                   >Campo obrigatório</span
                 >
@@ -111,14 +111,17 @@
               <div class="pay-confirm-block-double">
                 <div class="pay-confirm-block-internal">
                   <label class="pay-confirm__label">Número</label>
-                  <input id="numero" class="pay-confirm__input type="text" />
+                  <input id="numero" class="pay-confirm__input" type="text" />
                   <span class="pay-confirm__message--hidden"
                     >Campo obrigatório</span
                   >
                 </div>
                 <div class="pay-confirm-block-internal">
                   <label class="pay-confirm__label">Complemento</label>
-                  <input id="complemento" class="pay-confirm__input type="text"
+                  <input
+                    id="complemento"
+                    class="pay-confirm__input"
+                    type="text"
                   />
                   <span class="pay-confirm__message--hidden"
                     >Campo obrigatório</span
@@ -161,7 +164,14 @@
                 </div>
               </div>
               <div class="pay-block-btn">
-                <button class="pay__btn" type="submit">FINALIZAR</button>
+                <button
+                  type="submit"
+                  id="pay-btn"
+                  class="pay__btn"
+                  type="submit"
+                >
+                  FINALIZAR
+                </button>
               </div>
             </div>
           </form>

@@ -7,25 +7,94 @@
     document.querySelector(".pay__plan").innerHTML = "Anual";
   }
 
-  document.querySelector(".pay-form").addEventListener("submit", (e) => {
+  // Form Validation
+  const submitBtn = document.querySelector("#pay-btn");
+
+  const validate = (e) => {
     e.preventDefault();
 
-    const getValueById = (id) => {
-      const value = document.querySelector(`#${id}`).value;
-      return value;
+    const changeClass = (
+      labelRemoveClass,
+      labelAddClass,
+      inputRemoveClass,
+      inputAddClass,
+      messageRemoveClass,
+      messageAddClass,
+      id
+    ) => {
+      id.previousElementSibling.classList.remove(`${labelRemoveClass}`);
+      id.previousElementSibling.classList.add(`${labelAddClass}`);
+
+      id.classList.remove(`${inputRemoveClass}`);
+      id.classList.add(`${inputAddClass}`);
+
+      id.nextElementSibling.classList.remove(`${messageRemoveClass}`);
+      id.nextElementSibling.classList.add(`${messageAddClass}`);
     };
 
-    const name = getValueById("name");
-    const email = getValueById("email");
+    const name = document.querySelector("#name");
+    const email = document.querySelector("#email");
+    const cpf = document.querySelector("#cpf");
+    const telefone = document.querySelector("#telefone");
+    const cep = document.querySelector("#cep");
 
-    const data = [{ name, email }];
+    const ids = [name, email, cpf, telefone, cep];
+
+    if (name.value == "") {
+      changeClass(
+        "pay-confirm__label",
+        "pay-confirm__label--error",
+        "pay-confirm__input",
+        "pay-confirm__input--error",
+        "pay-confirm__message--hidden",
+        "pay-confirm__message--error",
+        name
+      );
+      name.focus();
+      return false;
+    }
+
+    if (name.value !== "") {
+      changeClass(
+        "pay-confirm__label--error",
+        "pay-confirm__label",
+        "pay-confirm__input--error",
+        "pay-confirm__input",
+        "pay-confirm__message--error",
+        "pay-confirm__message--hidden",
+        name
+      );
+      name.focus();
+    }
 
     /*
-    fetch("")
-      .then((resp) => {
-        return resp;
+      changeClass(
+        "pay-confirm__label--error",
+        "pay-confirm__label",
+        "pay-confirm__input--error",
+        "pay-confirm__input--hidden",
+        "pay-confirm__message--error",
+        "pay-confirm__message--hidden",
+        id
+      );
+
+      const data = {
+        name: name.value,
+        email: email.value,
+        cpf: cpf.value,
+        telefone: telefone.value,
+        cep: cep.value,
+      };
+    
+      fetch(url, {
+        method: "post",
+        body: data,
       })
-      .catch((error) => console.log(error));
+        .then()
+        .catch();
+    }
     */
-  });
+  };
+
+  submitBtn.addEventListener("click", validate);
 })();
