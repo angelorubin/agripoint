@@ -1,11 +1,10 @@
 (function () {
-  const plan = localStorage.getItem("selected-plan");
+  const selectedPlan = localStorage.getItem("selected-plan");
+  const payPlan = document.querySelector(".pay__plan");
 
-  if (plan == "monthly") {
-    document.querySelector(".pay__plan").innerHTML = "Mensal";
-  } else {
-    document.querySelector(".pay__plan").innerHTML = "Anual";
-  }
+  selectedPlan == "monthly"
+    ? (payPlan.innerHTML = "Mensal")
+    : (payPlan.innerHTML = "Anual");
 
   // Form Validation
   const form = document.querySelector(".pay-form");

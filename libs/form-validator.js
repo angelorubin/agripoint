@@ -5,8 +5,6 @@ class FormValidator {
   }
 
   initialize() {
-    console.log(this.form);
-    // this.validateOnEntry();
     this.validateOnSubmit();
   }
 
@@ -30,8 +28,7 @@ class FormValidator {
           field.previousElementSibling.classList.add(
             "pay-confirm__label--error"
           ))
-        }`,
-        "Campo obrigatório"
+        }`
       );
     }
   }
@@ -39,6 +36,6 @@ class FormValidator {
   validateOnEntry() {}
 
   setStatus(field, message) {
-    console.log({ field, message });
+    //  console.log({ field, message });
   }
 }
