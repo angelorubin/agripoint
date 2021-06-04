@@ -1,3 +1,10 @@
+/**
+ * Classe para validação de formulários
+ * Autor - Angelo Rubin
+ * Criado em - 01/06/2021
+ * Contato - angelorubin@gmail.com
+ * Github - https://github.com/angelorubin/agripoint/blob/master/libs/form-validator.js
+ */
 class FormValidator {
   constructor(form, fields) {
     this.form = form;
