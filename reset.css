@@ -1,0 +1,29 @@
+/* || GENERAL STYLES */
+
+:root {
+  --black: black;
+  --white: #ffffff;
+  --medium-white: #f6f6f6;
+  --dark-white: #d0d0d0;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: OpenSans-Regular, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+}
+
+ul {
+}
+
+blockquote {
+}
