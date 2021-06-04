@@ -1,5 +1,5 @@
 /**
- * Header
+ * Payment Header
  */
 
 .pay-header {
@@ -16,6 +16,10 @@
   border-bottom: none;
   border-right: none;
 }
+
+/**
+ * Payment Menu
+ */
 
 .pay-menu-container {
   display: flex;
@@ -72,6 +76,10 @@
   font-family: OPenSans-Regular, sans-serif;
 }
 
+/**
+ * Payment Submenu
+ */
+
 .pay-submenu-container {
   display: flex;
   flex-direction: column;
@@ -101,7 +109,7 @@
 }
 
 /**
- * Content
+ * Payment Main
  */
 
 .pay-main {
@@ -111,27 +119,32 @@
   background-color: #f5f5f5;
 }
 
-.pay-content {
+/**
+ * Payment Form
+ */
+
+.pay-form {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   background-color: white;
   border-bottom: 12px solid #215273;
   border-radius: 10px;
-  margin: 50px 30px;
+  margin: 45px 0;
+  width: 75%;
+  padding: 30px;
 }
 
-.pay-confirm {
-  margin: 20px 0;
-  width: 45%;
-  height: 100%;
+.pay-form__divider {
+  height: 70vh;
+  transform: rotate(180deg);
+  border: 1px solid #ebebeb;
+  margin: 30px;
 }
 
-.pay-confirm__title {
-  color: #215273;
-  font-size: 40px;
-  font-weight: lighter;
-  margin-bottom: 30px;
-}
-
+/**
+ * Payment Confirm
+ */
 @media (max-width: 900px) {
   .pay-form {
     border: 1px solid red;
@@ -143,33 +156,40 @@
   }
 }
 
-.pay-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-.pay-form__divider {
-  border: none;
-  border-left: 2px solid #ebebeb;
+.pay-confirm {
+  margin: 20px 0;
   height: 100%;
-  width: 1px;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
-.pay-confirm-block {
+.pay-confirm__title {
+  color: #215273;
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+
+.pay-confirm__input-group {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
+  width: 100%;
   margin: 10px 0;
 }
 
-.pay-confirm-internal-block {
+.dual {
   display: flex;
-  gap: 5px;
+}
+
+.phone {
+}
+
+.cep {
+}
+
+.pay-confirm-input-group--dual {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
 }
 
 .pay-confirm__label {
@@ -187,7 +207,7 @@
   min-height: 32px;
   border: none;
   border-radius: 3px;
-  padding-left: 5px;
+  flex: 1;
 }
 
 .pay-confirm__input--error {
@@ -208,12 +228,15 @@
   display: none;
 }
 
+/**
+ * Payment
+ */
+
 .pay {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 45%;
-  height: 100%;
+  margin: 20px 0;
+  gap: 20px;
 }
 
 .pay__title {
@@ -233,10 +256,15 @@
   font-size: 20px;
 }
 
-.pay-block {
+.pay-input-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.pay-input-group-double {
+  display: flex;
+  border: 2px dashed red;
 }
 
 .pay-block-triple {

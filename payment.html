@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="global-styles.css" />
+    <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
     <div>
@@ -60,131 +60,121 @@
         </div>
       </header>
       <main class="pay-main">
-        <div class="pay-content">
-          <form class="pay-form">
-            <!--PAY-CONFIRM BEGIN-->
-            <div class="pay-confirm">
-              <h1 class="pay-confirm__title">Confirme seus dados</h1>
-              <div class="pay-confirm-block">
-                <label class="pay-confirm__label">Nome</label>
-                <input id="name" class="pay-confirm__input" type="text" />
-                <span class="pay-confirm__message--hidden"
+        <form class="pay-form">
+          <div class="pay-confirm">
+            <h1 class="pay-confirm__title">Confirme seus dados</h1>
+
+            <div class="pay-confirm-input-group">
+              <label class="pay-confirm__label">Nome</label>
+              <input id="name" class="pay-confirm__input" type="text" />
+              <span class="pay-confirm__message--hidden"
+                >Campo obrigatório</span
+              >
+            </div>
+
+            <div class="pay-confirm-input-group">
+              <label class="pay-confirm__label">E-mail</label>
+              <input id="email" class="pay-confirm__input" type="text" />
+              <span class="pay-confirm__message--hidden"
+                >Campo obrigatório</span
+              >
+            </div>
+
+            <div class="pay-confirm-input-group">
+              <label class="pay-confirm__label">CPF</label>
+              <input id="cpf" class="pay-confirm__input" type="text" />
+              <span class="pay-confirm__message--hidden"
+                >Campo obrigatório</span
+              >
+            </div>
+
+            <div class="dual pay-confirm__input-group">
+              <div class="phone pay-confirm__input-group">
+                <label class="pay-confirm__label">Telefone</label>
+                <input id="telefone" class="pay-confirm__input" type="text" />
+                <span class="pay-confirm__message--error"
                   >Campo obrigatório</span
                 >
               </div>
-              <div class="pay-confirm-block">
-                <label class="pay-confirm__label">E-mail</label>
-                <input id="email" class="pay-confirm__input" type="text" />
+              <div class="cep pay-confirm__input-group">
+                <label class="pay-confirm__label">CEP</label>
+                <input id="cep" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--hidden"
                   >Campo obrigatório</span
                 >
-              </div>
-              <div class="pay-confirm-block">
-                <label class="pay-confirm__label">CPF</label>
-                <input id="cpf" class="pay-confirm__input" type="text" />
-                <span class="pay-confirm__message--hidden"
-                  >Campo obrigatório</span
-                >
-              </div>
-              <!-- Block Phone Begin-->
-              <div class="pay-confirm-block">
-                <div class="pay-confirm-internal-block">
-                  <div>
-                    <label class="pay-confirm__label">Telefone</label>
-                    <input
-                      id="telefone"
-                      class="pay-confirm__input"
-                      type="text"
-                    />
-                    <span class="pay-confirm__message--hidden"
-                      >Campo obrigatório</span
-                    >
-                  </div>
-                  <div>
-                    <label class="pay-confirm__label">CEP</label>
-                    <input id="cep" class="pay-confirm__input" type="text" />
-                    <span class="pay-confirm__message--hidden"
-                      >Campo obrigatório</span
-                    >
-                  </div>
-                </div>
-              </div>
-              <!-- Block Phone End-->
-              <div class="pay-confirm-block">
-                <label class="pay-confirm__label">Endereço</label>
-                <input id="endereco" class="pay-confirm__input" type="text" />
-                <span class="pay-confirm__message--hidden"
-                  >Campo obrigatório</span
-                >
-              </div>
-              <div class="pay-confirm-block">
-                <div class="pay-confirm-internal-block">
-                  <div class="pay-confirm-block">
-                    <label class="pay-confirm__label">Número</label>
-                    <input id="numero" class="pay-confirm__input" type="text" />
-                    <span class="pay-confirm__message--hidden"
-                      >Campo obrigatório</span
-                    >
-                  </div>
-                  <div class="pay-confirm-block">
-                    <label class="pay-confirm__label">Complemento</label>
-                    <input
-                      id="complemento"
-                      class="pay-confirm__input"
-                      type="text"
-                    />
-                    <span class="pay-confirm__message--hidden"
-                      >Campo obrigatório</span
-                    >
-                  </div>
-                </div>
               </div>
             </div>
-            <!--PAY-CONFIRM END-->
-            <hr class="pay-form__divider" />
-            <!--PAY BEGIN-->
-            <div class="pay">
-              <h1 class="pay__title">Pagamento</h1>
-              <h2 class="pay__subtitle">
-                Plano selecionado: <span class="pay__plan"></span>
-              </h2>
-              <div class="pay-block">
-                <label class="pay__label">Nome no cartão de crédito</label>
-                <input id="nome-cartao" class="pay__input" />
-                <span class="pay__message--hidden">Campo obrigatório</span>
+
+            <div class="pay-confirm-input-group">
+              <label class="pay-confirm__label">Endereço</label>
+              <input id="endereco" class="pay-confirm__input" type="text" />
+              <span class="pay-confirm__message--hidden"
+                >Campo obrigatório</span
+              >
+            </div>
+
+            <div class="pay-confirm-input-group--dual">
+              <div class="pay-confirm-input-group">
+                <label class="pay-confirm__label">Número</label>
+                <input id="numero" class="pay-confirm__input" type="text" />
+                <span class="pay-confirm__message--hidden"
+                  >Campo obrigatório</span
+                >
               </div>
-              <div class="pay-block">
-                <label class="pay__label">Número do cartão</label>
-                <input id="numero-cartao" type="text" class="pay__input" />
-                <span class="pay__message--hidden">Campo obrigatório</span>
-              </div>
-              <div class="pay-block-triple">
-                <div>
-                  <label class="pay__label">Validade (MM/YY)</label>
-                  <div>
-                    <input id="mes" type="text" class="pay__input" />
-                    <span class="pay__message--hidden">Campo obrigatório</span>
-                  </div>
-                  <div>
-                    <input id="ano" type="text" class="pay__input" />
-                    <span class="pay__message--hidden">Campo obrigatório</span>
-                  </div>
-                </div>
-                <div>
-                  <label class="pay__label">Código de segurança</label>
-                  <input id="codigo-seguranca" type="text" class="pay__input" />
-                  <span class="pay__message--hidden">Campo obrigatório</span>
-                </div>
-              </div>
-              <div class="pay-block-btn">
-                <button type="submit" id="pay-btn" class="pay__btn">
-                  FINALIZAR
-                </button>
+              <div class="pay-confirm-input-group">
+                <label class="pay-confirm__label">Complemento</label>
+                <input
+                  id="complemento"
+                  class="pay-confirm__input"
+                  type="text"
+                />
+                <span class="pay-confirm__message--hidden"
+                  >Campo obrigatório</span
+                >
               </div>
             </div>
-            <!--PAY END-->
-          </form>
-        </div>
+          </div>
+
+          <hr class="pay-form__divider" />
+
+          <div class="pay">
+            <h1 class="pay__title">Pagamento</h1>
+
+            <h2 class="pay__subtitle">
+              Plano selecionado: <span class="pay__plan"></span>
+            </h2>
+
+            <div class="pay-input-group">
+              <label class="pay__label">Nome no cartão de crédito</label>
+              <input id="nome-cartao" class="pay__input" />
+              <span class="pay__message--hidden">Campo obrigatório</span>
+            </div>
+
+            <div class="pay-input-group">
+              <label class="pay__label">Número do cartão</label>
+              <input class="pay__input" id="numero-cartao" type="text" />
+              <span class="pay__message--hidden">Campo obrigatório</span>
+            </div>
+
+            <div class="pay-input-group-double">
+              <div>
+                <label class="pay__label">Validade (MM/YY)</label>
+                <input id="mes" type="text" class="pay__input" />
+                <input id="ano" type="text" class="pay__input" />
+                <span class="pay__message--hidden">Campo obrigatório</span>
+              </div>
+              <div>
+                <label class="pay__label">Código de segurança</label>
+                <input id="codigo-seguranca" type="text" class="pay__input" />
+                <span class="pay__message--hidden">Campo obrigatório</span>
+              </div>
+            </div>
+
+            <button type="submit" id="pay-btn" class="pay__btn">
+              FINALIZAR
+            </button>
+          </div>
+        </form>
       </main>
       <script src="libs/form-validator.js"></script>
       <script src="payment.js"></script>
