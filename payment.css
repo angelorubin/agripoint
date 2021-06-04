@@ -147,18 +147,18 @@
  */
 @media (max-width: 900px) {
   .pay-form {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
   }
   .pay-confirm {
-    width: 100%;
   }
 }
 
 .pay-confirm {
   margin: 20px 0;
   height: 100%;
+  width: 40%;
+  flex: 1;
 }
 
 .pay-confirm__title {
@@ -168,7 +168,7 @@
   margin-bottom: 30px;
 }
 
-.pay-confirm__input-group {
+.pay-confirm-input-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -176,20 +176,10 @@
   margin: 10px 0;
 }
 
-.dual {
+.pay-confirm-input-group--row {
   display: flex;
-}
-
-.phone {
-}
-
-.cep {
-}
-
-.pay-confirm-input-group--dual {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .pay-confirm__label {
@@ -207,7 +197,7 @@
   min-height: 32px;
   border: none;
   border-radius: 3px;
-  flex: 1;
+  width: 100%;
 }
 
 .pay-confirm__input--error {
@@ -235,6 +225,7 @@
 .pay {
   display: flex;
   flex-direction: column;
+  flex: 1;
   margin: 20px 0;
   gap: 20px;
 }
@@ -262,13 +253,10 @@
   gap: 10px;
 }
 
-.pay-input-group-double {
+.pay-input-group-row {
   display: flex;
-  border: 2px dashed red;
-}
-
-.pay-block-triple {
-  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .pay-block-btn {

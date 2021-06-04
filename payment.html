@@ -88,15 +88,15 @@
               >
             </div>
 
-            <div class="dual pay-confirm__input-group">
-              <div class="phone pay-confirm__input-group">
+            <div class="pay-confirm-input-group--row">
+              <div class="pay-confirm-input-group">
                 <label class="pay-confirm__label">Telefone</label>
                 <input id="telefone" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--error"
                   >Campo obrigatório</span
                 >
               </div>
-              <div class="cep pay-confirm__input-group">
+              <div class="pay-confirm-input-group">
                 <label class="pay-confirm__label">CEP</label>
                 <input id="cep" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--hidden"
@@ -113,15 +113,15 @@
               >
             </div>
 
-            <div class="pay-confirm-input-group--dual">
-              <div class="pay-confirm-input-group">
+            <div class="pay-confirm-input-group--row">
+              <div class="number pay-confirm-input-group">
                 <label class="pay-confirm__label">Número</label>
                 <input id="numero" class="pay-confirm__input" type="text" />
                 <span class="pay-confirm__message--hidden"
                   >Campo obrigatório</span
                 >
               </div>
-              <div class="pay-confirm-input-group">
+              <div class="complement pay-confirm-input-group">
                 <label class="pay-confirm__label">Complemento</label>
                 <input
                   id="complemento"
@@ -156,14 +156,16 @@
               <span class="pay__message--hidden">Campo obrigatório</span>
             </div>
 
-            <div class="pay-input-group-double">
-              <div>
+            <div class="pay-input-group-row">
+              <div class="pay-input-group">
                 <label class="pay__label">Validade (MM/YY)</label>
-                <input id="mes" type="text" class="pay__input" />
-                <input id="ano" type="text" class="pay__input" />
+                <div class="pay-input-group-row">
+                  <input id="mes" class="pay__input" type="text" />
+                  <input id="ano" class="pay__input" type="text" />
+                </div>
                 <span class="pay__message--hidden">Campo obrigatório</span>
               </div>
-              <div>
+              <div class="pay-input-group">
                 <label class="pay__label">Código de segurança</label>
                 <input id="codigo-seguranca" type="text" class="pay__input" />
                 <span class="pay__message--hidden">Campo obrigatório</span>
