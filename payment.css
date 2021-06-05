@@ -1,3 +1,29 @@
+@media (max-width: 900px) {
+  .pay-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+  }
+
+  .pay-confirm {
+    border: 2px solid red;
+    flex: 1;
+  }
+
+  .pay {
+    border: 2px solid red;
+    flex: 1;
+  }
+
+  .pay-form__divider {
+    border: 1px solid red;
+    height: 1px;
+    width: 90%;
+  }
+}
+
 /**
  * Payment Header
  */
@@ -126,18 +152,14 @@
 .pay-form {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   background-color: white;
   border-bottom: 12px solid #215273;
   border-radius: 10px;
-  margin: 45px 0;
-  width: 75%;
+  margin: 45px 50px;
   padding: 30px;
 }
 
 .pay-form__divider {
-  height: 70vh;
-  transform: rotate(180deg);
   border: 1px solid #ebebeb;
   margin: 30px;
 }
@@ -145,19 +167,9 @@
 /**
  * Payment Confirm
  */
-@media (max-width: 900px) {
-  .pay-form {
-    display: flex;
-    flex-direction: column;
-  }
-  .pay-confirm {
-  }
-}
 
 .pay-confirm {
   margin: 20px 0;
-  height: 100%;
-  width: 40%;
   flex: 1;
 }
 
@@ -270,6 +282,24 @@
 }
 
 .pay__input {
+  background-color: #f5f5f5;
+  min-height: 32px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+.pay__input--month {
+  width: 30%;
+  background-color: #f5f5f5;
+  min-height: 32px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+.pay__input--year {
+  width: 30%;
   background-color: #f5f5f5;
   min-height: 32px;
   border: none;
