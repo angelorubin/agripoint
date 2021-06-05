@@ -204,23 +204,6 @@
   font-size: 17px;
 }
 
-.pay-confirm__input {
-  background-color: #f5f5f5;
-  min-height: 32px;
-  border: none;
-  border-radius: 3px;
-  width: 100%;
-}
-
-.pay-confirm__input--error {
-  background-color: #f5f5f5;
-  min-height: 32px;
-  border: none;
-  border-radius: 3px;
-  border: 1px solid #c61a1a;
-  padding-left: 5px;
-}
-
 .pay-confirm__message--error {
   color: #c61a1a;
   font-size: 12px;
@@ -281,14 +264,6 @@
   font-size: 17px;
 }
 
-.pay__input {
-  background-color: #f5f5f5;
-  min-height: 32px;
-  border: none;
-  border-radius: 3px;
-  padding-left: 5px;
-}
-
 .pay__input--month {
   width: 30%;
   background-color: #f5f5f5;
@@ -321,4 +296,25 @@
   color: #ffffff;
   border: none;
   border-radius: 3px;
+}
+
+/**
+ * Pay Input
+ */
+
+.pay__input {
+  background-color: #f5f5f5;
+  min-height: 32px;
+  border: none;
+  border-radius: 3px;
+  padding-left: 5px;
+}
+
+.pay__input--error {
+  background-color: #f5f5f5;
+  min-height: 32px;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid #c61a1a;
+  padding-left: 5px;
 }
