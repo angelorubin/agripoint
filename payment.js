@@ -8,7 +8,16 @@
 
   // Form Validation
   const form = document.querySelector(".pay-form");
-  const fields = ["name", "email"];
+  const fields = [
+    "name",
+    "email",
+    "cpf",
+    "cep",
+    "phone",
+    "number",
+    "complement",
+    "address",
+  ];
   const validator = new FormValidator(form, fields);
   validator.initialize();
 })();
