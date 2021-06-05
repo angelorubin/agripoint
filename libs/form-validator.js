@@ -27,22 +27,32 @@ class FormValidator {
   }
 
   validateFields(field) {
+    console.log(field.id);
     if (field.value.trim() === "") {
-      this.setStatus(
-        field,
-        `${
-          (field.previousElementSibling.classList.remove("pay-confirm__label"),
-          field.previousElementSibling.classList.add(
-            "pay-confirm__label--error"
-          ))
-        }`
+      field.previousElementSibling.classList.remove("pay-confirm__label");
+      field.previousElementSibling.classList.add("pay-confirm__label--error");
+      field.classList.remove("pay__input");
+      field.classList.add("pay__input--error");
+      field.nextElementSibling.classList.remove("pay-confirm__message--hidden");
+      field.nextElementSibling.classList.add("pay-confirm__message--error");
+      field.focus();
+    } else {
+      field.previousElementSibling.classList.remove(
+        "pay-confirm__label--error"
       );
+      field.previousElementSibling.classList.add("pay-confirm__label");
+
+      field.classList.remove("pay__input--error");
+      field.classList.add("pay__input");
+
+      field.nextElementSibling.classList.remove("pay-confirm__message--error");
+      field.nextElementSibling.classList.add("pay-confirm__message--hidden");
+
+      field.focus();
     }
   }
 
   validateOnEntry() {}
 
-  setStatus(field, message) {
-    //  console.log({ field, message });
-  }
+  setStatus() {}
 }
