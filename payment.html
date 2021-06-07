@@ -60,32 +60,26 @@
         </div>
       </header>
       <main class="pay-main">
-        <form class="pay-form">
+        <form id="pay-form" class="pay-form">
           <div class="pay-confirm">
             <h1 class="pay-confirm__title">Confirme seus dados</h1>
 
-            <div class="pay-confirm-input-group">
-              <label class="pay-confirm__label">Nome</label>
-              <input id="name" class="pay__input" type="text" />
-              <span class="pay-confirm__message--hidden"
-                >Campo obrigatório</span
-              >
+            <div class="form-group">
+              <label for="nome" class="label">Nome</label>
+              <input name="nome" class="field" type="text" />
+              <div class="messages"></div>
             </div>
 
-            <div class="pay-confirm-input-group">
-              <label class="pay-confirm__label">E-mail</label>
-              <input id="email" class="pay__input" type="text" />
-              <span class="pay-confirm__message--hidden"
-                >Campo obrigatório</span
-              >
+            <div class="form-group">
+              <label for="email" class="label">E-mail</label>
+              <input name="email" class="field" type="email" />
+              <div class="messages"></div>
             </div>
 
-            <div class="pay-confirm-input-group">
-              <label class="pay-confirm__label">CPF</label>
-              <input id="cpf" class="pay__input" type="text" />
-              <span class="pay-confirm__message--hidden"
-                >Campo obrigatório</span
-              >
+            <div class="form-group">
+              <label for="cpf" class="label">CPF</label>
+              <input name="cpf" class="field" type="text" />
+              <div class="messages"></div>
             </div>
 
             <div class="pay-confirm-input-group--row">
@@ -174,7 +168,8 @@
           </div>
         </form>
       </main>
-      <script src="libs/form-validator.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
       <script src="payment.js"></script>
     </div>
   </body>
