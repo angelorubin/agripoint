@@ -6,15 +6,23 @@
     ? (payPlan.innerHTML = "Mensal")
     : (payPlan.innerHTML = "Anual");
 
+  const http = axios.create({
+    baseURL: "https://jsonplaceholder.typicode.com/",
+    timeout: 1000,
+    headers: { "X-Custom-Header": "foobar" },
+  });
+
   // Seleciona o formulário a ser validado
   const form = document.querySelector("#pay-form");
 
-  // Defini as restrições de validação de cada campo do formulário
+  // Defini as restrições de validação para cada campo do formulário
   // https://validatejs.org/#constraints
   const constraints = {
     nome: {
       // You need to pick a name too
-      presence: true,
+      presence: {
+        message: "não pode ser em branco",
+      },
       // And it must be between 3 and 20 characters long
       length: {
         minimum: 3,
@@ -24,13 +32,25 @@
     },
     email: {
       // Email is required
-      presence: true,
+      presence: { message: "não pode ser em branco" },
       // and must be an email
       email: true,
     },
     cpf: {
       // Email is required
-      presence: true,
+      presence: {
+        message: "não pode ser em branco",
+      },
+    },
+    telefone: {
+      presence: {
+        message: "não pode ser em branco",
+      },
+    },
+    cep: {
+      presence: {
+        message: "não pode ser em branco",
+      },
     },
   };
 
@@ -40,7 +60,7 @@
     handleFormSubmit(form);
   });
 
-  // Aplica as regras de validação no submit do formulário
+  // Aplica as regras de validação antes da submissão do formulário
   const handleFormSubmit = (form) => {
     // validate the form against the constraints
     let errors = validate(form, constraints);
@@ -49,7 +69,9 @@
     showErrors(form, errors || {});
 
     if (!errors) {
-      showSuccess();
+      let formData = new FormData(form);
+      const data = JSON.stringify(Object.fromEntries(formData));
+      sendFormData(data);
     }
   };
 
@@ -130,12 +152,22 @@
     messages.appendChild(block);
   };
 
-  const showSuccess = () => {
-    // We made it \:D/
-    alert("Success!");
+  const sendFormData = async (formData) => {
+    try {
+      const resp = await http
+        .post("posts", { formData })
+        .then(function (resp) {
+          return resp.data.formData;
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      console.log(JSON.parse(resp));
+    } catch (err) {
+      // Handle Error Here
+      console.error(err);
+    }
   };
-
-  const inputs = document.querySelectorAll("input, textarea, select");
 })();
 
 /**
