@@ -8,7 +8,7 @@
 
   const http = axios.create({
     baseURL: "https://jsonplaceholder.typicode.com/",
-    timeout: 1000,
+    timeout: 2000,
     headers: { "X-Custom-Header": "foobar" },
   });
 
@@ -163,24 +163,12 @@
           console.log(error);
         });
       console.log(JSON.parse(resp));
+
+      // Redireciona para a pagina plans.html após o envio do formulário
+      window.location.replace("http://127.0.0.1:5500/plans.html");
     } catch (err) {
       // Handle Error Here
       console.error(err);
     }
   };
 })();
-
-/**
-  const fields = [
-    "name",
-    "email",
-    "cpf",
-    "cep",
-    "phone",
-    "number",
-    "complement",
-    "address",
-  ];
-  const validator = new FormValidator(form, fields);
-  validator.initialize();
-  */
